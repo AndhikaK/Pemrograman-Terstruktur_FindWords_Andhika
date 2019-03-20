@@ -2,6 +2,7 @@
   //Andhika Kurniawan - 1817051027
   //Ario Rinaldi - 1817051040
   //Kurnia Agung Firdaus - 1817051056
+  //Muhammad Alamsyah - 1817051051
 
 #include <iostream>
 #include <cstring>
@@ -63,6 +64,42 @@ int carikata(char *(input))
 				if (cek==panjang_kata-1){
 					flag+=1;
 				}
+				else{
+					flag+=0;
+				}
+				cek=0;
+				
+				//Kode vertikal ke bawah
+				for (int k=0;k<panjang_kata;k++){
+					if (input[k]==data_kata[i+k][j]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==panjang_kata-1){
+					flag+=1;
+				}
+				else{
+					flag+=0;
+				}
+				cek=0;
+				
+				//Kode vertikal ke atas
+				for (int k=0;k<panjang_kata;k++){
+					if (input[k]==data_kata[i-k][j]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+					
+				}
+				if (cek==panjang_kata-1){
+					flag+=1;
+				}
+				
 				else{
 					flag+=0;
 				}
