@@ -1,5 +1,6 @@
 //Oleh :
   //Andhika Kurniawan - 1817051027
+  //Ario Rinaldi - 1817051040
 
 #include <iostream>
 #include <cstring>
@@ -64,7 +65,42 @@ int carikata(char *(input))
 				else{
 					flag+=0;
 				}
-				cek=0;									
+				cek=0;
+				
+				//Kode diagonal kiri atas ke kanan bawah
+				for (int k=0;k<panjang_kata;k++){
+					if (input[k]==data_kata[i-k][j-k]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==panjang_kata-1){
+					flag+=1;
+				}
+				else{
+					flag+=0;
+				}
+				cek=0;
+				
+				//Kode diagonal kanan atas ke kiri bawah
+				for (int k=0;k<panjang_kata;k++){
+					if (input[k]==data_kata[i-k][j+k]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==panjang_kata-1){
+					flag+=1;
+				}
+				else{
+					flag+=0;
+				}
+				cek=0;
+				
 			}
 			
 		}
