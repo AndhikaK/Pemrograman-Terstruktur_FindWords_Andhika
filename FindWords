@@ -68,7 +68,7 @@ int carikata(char *(input))
 					flag+=0;
 				}
 				cek=0;
-				
+								
 				//Kode vertikal ke bawah
 				for (int k=0;k<panjang_kata;k++){
 					if (input[k]==data_kata[i+k][j]){
@@ -172,7 +172,7 @@ int carikata(char *(input))
 					flag+=0;
 				}
 				cek=0;
-
+				
 			}
 			
 		}
@@ -187,13 +187,18 @@ int carikata(char *(input))
 }
 
 
-//Main Program
+////PROGRAM INTI
 int main()
 {
 	int panjang_kata, cek, flag, batas;
 	
+	cout<<"                               Program Find Words"<<endl<<endl;
+	
 	cout<<"Banyak Kata : ";
 	cin>>batas;
+	
+	cout<<endl<<endl<<"================================================================================";
+	cout<<"     Tabel Daftar Kata"<<endl;
 	char data_kata[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 			 				 {'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 							 {'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
@@ -212,7 +217,7 @@ int main()
 	
 	
 	
-	
+	//Menampilkan Data Tabel
 	for(int i=0;i<15;i++){
 		for (int j=0;j<15;j++){
 			cout<<data_kata[i][j]<<" ";
@@ -223,11 +228,20 @@ int main()
 	
 	char input[batas][15];
 	
+
+	
+	//Jumlah kata input
+	cout<<"================================================================================"<<endl<<endl;
+	cout<<"Masukkan kata :"<<endl;
 	for (int i=0;i<batas;i++){
 		cin>>input[i];
 		}
 	
-	
+	cout<<endl<<endl;
+	cout<<"================================================================================"<<endl;
+	cout<<"Kata yang anda inputkan : "<<endl;	
+		
+	//Output
 	for (int i=0;i<batas;i++){
 		carikata(*(input+i));
 		
